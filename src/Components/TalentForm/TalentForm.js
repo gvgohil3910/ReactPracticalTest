@@ -23,7 +23,7 @@ function TalentForm(props) {
             "email": formData.email,
             "password": formData.password
         };
-        const response = await fetch(url, {
+        await fetch(url, {
             method: 'POST',
             // mode: 'cors',
             // cache: 'no-cache', 
