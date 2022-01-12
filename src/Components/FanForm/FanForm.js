@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import InputTextField from '../InputTextField/InputTextField';
 import styles from './FanForm.module.css';
 import {API_BASE_URL} from '../../config';
-import { isEmail } from '../../helper';
+// import { isEmail } from '../../helper';
 function FanForm(props) {
     const [formData, setFormData] = useState({});
     const [errorMessages, setErrorMessages] = useState({});
@@ -66,9 +66,9 @@ function FanForm(props) {
         if(!formData.email || formData.email === '') {
             isvalid = false;
             errMessages = { ...errMessages, email: 'Email is Required' };
-        } else if(!isEmail(formData.email)){
+        /*} else if(!isEmail(formData.email)){
             isvalid = false;
-            errMessages = { ...errMessages, email: 'Invalid Email' };
+            errMessages = { ...errMessages, email: 'Invalid Email' };*/
         } else{
             errMessages = { ...errMessages, email: '' };
         }
